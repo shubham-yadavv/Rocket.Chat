@@ -93,7 +93,7 @@ export const warnStatusChange = (appName: string, status: AppStatus): void => {
 type appButtonPropsResponse = {
 	action: 'update' | 'install' | 'purchase';
 	icon?: 'reload';
-	label: 'Update' | 'Install' | 'Subscribe' | 'See Pricing' | 'Try now' | 'Buy';
+	label: 'Update' | 'Install' | 'Subscribe' | 'See pricing' | 'Try now' | 'Buy';
 };
 
 export const appButtonProps = ({
@@ -143,7 +143,7 @@ export const appButtonProps = ({
 		if (isTierBased) {
 			return {
 				action: 'purchase',
-				label: 'See Pricing',
+				label: 'See pricing',
 			};
 		}
 
@@ -170,7 +170,7 @@ export const appButtonProps = ({
 type appStatusSpanPropsResponse = {
 	type?: 'failed' | 'warning';
 	icon: 'warning' | 'ban' | 'checkmark-circled' | 'check';
-	label: 'Config Needed' | 'Failed' | 'Disabled' | 'Trial period' | 'Enabled';
+	label: 'Config Needed' | 'Failed' | 'Disabled' | 'Trial Period' | 'Enabled';
 };
 
 export const appStatusSpanProps = ({ installed, status, subscriptionInfo }: App): appStatusSpanPropsResponse | undefined => {
@@ -200,7 +200,7 @@ export const appStatusSpanProps = ({ installed, status, subscriptionInfo }: App)
 	if (isOnTrialPeriod) {
 		return {
 			icon: 'checkmark-circled',
-			label: 'Trial period',
+			label: 'Trial Period',
 		};
 	}
 

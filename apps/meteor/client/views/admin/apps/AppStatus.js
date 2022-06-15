@@ -129,7 +129,7 @@ const AppStatus = ({ app, showStatus = true, isAppDetailsPage, installed = false
 						) : (
 							<>
 								{button.icon && <Icon name={button.icon} />}
-								{t(button.label)}
+								{t(button.label.replace(' ', '_'))}
 							</>
 						)}
 					</Button>
@@ -145,7 +145,7 @@ const AppStatus = ({ app, showStatus = true, isAppDetailsPage, installed = false
 			{status && (
 				<Box display='flex' alignItems='center' pi='x14' pb='x8' bg={AppStatusStyle.bg} color={AppStatusStyle.color}>
 					<Icon size='x20' name={status.icon} mie='x4' />
-					{t(status.label)}
+					{t(status.label.replace(' ', '_'))}
 				</Box>
 			)}
 		</Box>
