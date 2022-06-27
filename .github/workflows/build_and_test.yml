@@ -174,7 +174,7 @@ jobs:
           tar czf /tmp/Rocket.Chat.tar.gz bundle
 
       - name: Store build
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: build
           path: /tmp/Rocket.Chat.tar.gz
@@ -367,7 +367,7 @@ jobs:
           npm run test:playwright
 
       - name: Store playwright test trace
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: playwright-test-trace
@@ -684,7 +684,7 @@ jobs:
           IS_EE=true npm run test:playwright
 
       - name: Store playwright test trace
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: playwright-test-trace
